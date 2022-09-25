@@ -64,7 +64,7 @@ public class GameTourTest {
     @Test
     public void ShouldStopIfOneUnregisteredPlayer() {
 
-        Assertions.assertThrows(NotRegisteredPlayerException.class, () -> {
+        Assertions.assertThrows(NotRegisteredException.class, () -> {
                     game.round("Egor", "Natasha");
                 }
         );
@@ -73,7 +73,7 @@ public class GameTourTest {
     @Test
     public void ShouldStopIfAllUnregisteredPlayers() {
 
-        Assertions.assertThrows(NotRegisteredPlayerException.class, () -> {
+        Assertions.assertThrows(NotRegisteredException.class, () -> {
                     game.round("Yulia", "Natasha");
                 }
         );

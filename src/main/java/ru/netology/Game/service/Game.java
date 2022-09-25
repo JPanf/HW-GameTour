@@ -28,10 +28,10 @@ public class Game {
         Player player2 = findPlayer(playerName2);
 
         if (player1 == null) {
-            throw new NotRegisteredPlayerException("Игрок " + playerName1 + " не зарегистрирован");
+            throw new NotRegisteredException("Игрок " + playerName1 + " не зарегистрирован");
         }
         if (player2 == null) {
-            throw new NotRegisteredPlayerException("Игрок " + playerName2 + " не зарегистрирован");
+            throw new NotRegisteredException("Игрок " + playerName2 + " не зарегистрирован");
         }
 
         if (player1.getStrength() == player2.getStrength()) {
